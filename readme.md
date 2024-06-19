@@ -1,46 +1,43 @@
-# Desafio Programa Inova Talentos - Radix
-> Autor: Gilvan Wanderley de Farias Neto
+# RAG-Chat
+> Author: Gilvan Wanderley de Farias Neto
 ---------------
-## Descrição do Desafio
-Elabore um sistema baseado em RAG (Retrieval Augmented Generation) aplicado a documentos financeiros (relatórios, artigos, quaisquer documentações da área).
-
-## Descrição da Solução
+## Solution Description
 ![Chat App Diagram](./docs/images/diagram.png)
-O aplicativo segue estas etapas para fornecer respostas às suas perguntas:
+The application follows these steps to provide answers to your questions:
 
-* **Carregamento de PDF**: O aplicativo lê vários documentos PDF e extrai seu conteúdo de texto.
+* **PDF Loading**: The app reads multiple PDF documents and extracts their text content.
 
-* **Text Chunking**: o texto extraído é dividido em pedaços menores que podem ser processados ​​de forma eficaz.
+* **Text Chunking**: The extracted text is divided into smaller chunks that can be processed effectively.
 
-* **Modelo de linguagem**: O aplicativo utiliza um modelo de linguagem para gerar representações vetoriais (incorporação) dos pedaços de texto.
+* **Language Model**: The app uses a language model to generate vector representations (embeddings) of the text chunks.
 
-* **Correspondência de similaridade**: quando você faz uma pergunta, o aplicativo a compara com os blocos de texto e identifica os mais semanticamente semelhantes.
+* **Similarity Matching**: When you ask a question, the app compares it against the text blocks and identifies the most semantically similar ones.
 
-* **Geração de Resposta**: Os pedaços selecionados são passados ​​para o modelo de linguagem, que gera uma resposta baseada no conteúdo relevante dos PDFs.
+* **Answer Generation**: The selected chunks are passed to the language model, which generates an answer based on the relevant content from the PDFs.
 
-## Dependências e Instalação
+## Dependencies and Installation
 
-### Instalação Usando Poetry
+### Installation Using Poetry
 
 ```
 poetry shell
 poetry install
 ```
 
-### Instalação Usando Pip
+### Installation Using Pip
 
 ```
 pip install -r requirements.txt
 ```
 
-## Utilização
-Para inicializar o Chat, siga estas etapas:
-* Certifique-se de estar com o ambiente ativiado, ter instalado as dependências necessárias e adicionado a chave de API OpenAI ao arquivo .env.
-* Execute o arquivo app.py usando o Streamlit. Execute o seguinte comando:
+## Usage
+To start the Chat, follow these steps:
+* Make sure your environment is activated, required dependencies are installed, and the OpenAI API key is added to the .env file.
+* Run the app.py file using Streamlit. Execute the following command:
 ```
 streamlit run app.py
 ```
-* O aplicativo será iniciado em seu navegador padrão, exibindo a interface do usuário.
+* The app will start in your default browser, displaying the user interface.
 ![Chat App UI](./docs/images/chat_UI.png)
-* Carregue vários ou um documentos PDF no aplicativo seguindo as instruções fornecidas.
-* Faça perguntas em sobre os PDFs carregados usando a interface de chat.
+* Load one or multiple PDF documents into the app following the provided instructions.
+* Ask questions about the loaded PDFs using the chat interface.
